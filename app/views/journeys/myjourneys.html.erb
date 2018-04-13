@@ -1,0 +1,38 @@
+<div class="alljourneys">
+
+<%@all_journeys.each do |f|%>
+<div class="homepagejourney">
+
+
+
+<br>
+
+<br>
+<%=link_to f.goal, overview_path(:id => f.id)%>
+    
+    <br>
+    <br>
+    
+<%if !(f.status)%>
+<%=link_to 'Start Journey', start_journey_path(:id=>f.id), method: :patch%>    
+<%else%>
+<%=link_to 'Finish Journey', start_journey_path(:id=>f.id), method: :patch%>    
+<%end%>    
+    
+</div>
+<%end%>
+    
+</div>
+
+<h1>Followed Journeys</h1>
+
+<%@followed.each do |f|%>
+<%@user = User.find(f.user_id)%>
+<%@followedjourneys = @user.journeys%>
+<%@followedjourneys.each do |k|%>
+<strong><%=k.goal%></strong>
+<br>
+<%end%>
+<%end%>
+
+

@@ -1,0 +1,47 @@
+<br>
+<h1 class="wow tada" style="text-align:center;">Hi! <%=current_user.username%></h1>
+<br>
+<h2 class="wow tada" style="text-align:center;">Welcome to your dashboard!</h2>
+
+
+<main class="dashboard">
+    
+    
+    
+<div class="wow fadeInLeft" id="lefsidedashboard">
+    
+<a style="color: white; text-decoration: none;" href="/myjourneys"><div class="wow fadeInLeft" id="viewmyjourneys">
+
+    <h3>My Journeys</h3>
+
+    </div>
+</a>
+
+
+<div class="wow fadeInLeft" id="currentjourneyprogress">
+
+    <h3 class="wow zoomInDown">Current Journey Progress</h3>
+    <div class="wow zoomInDown" id="goalname"><%=@active.goal%></div>
+    
+    <span class="wow zoomInDown" id="journeyprogress"></span>
+
+</div>
+    <div class="wow fadeInLeft" id="nextintodolist"><h3>Next Task To Do</h3></div>
+    <div class="wow fadeInLeft"  id="createtodolist"><h3>Create a new Todo List</h3></div>
+</div>
+
+<div class="wow fadeInLeft" id="myidols">
+    <h3>My Idols!</h3>
+    <%@idols.each do |f|%>
+    <%@user = User.find(f.user_id)%>
+    <div id="idol"><%=@user.username%></div>
+    <%end%>
+
+</div>
+    
+    
+    
+
+
+
+</main>

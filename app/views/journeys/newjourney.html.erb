@@ -1,0 +1,25 @@
+<body class="startjourney">
+<main class="pagebody">    
+<h1 class="wow fadeIn">Start a new Journey!</h1>    
+<br>
+    <br>
+    <br>
+<div id="journey-card" class="wow fadeInLeft">
+<%=form_for @journey do |f|%>
+<%=f.text_area :goal, cols:"50", rows:"5", :placeholder=>"Tell us about your journey!"%>
+
+<br>
+<br>    
+
+<%=f.label :"I will reach my goal till:"%>
+<%=f.date_field :deadline%>
+    
+    <br>
+    <br>
+    <br>
+<%=f.submit "Start Journey", :class=>"button"%>
+<%end%>
+    </div>    
+</main>
+    
+</body>

@@ -1,0 +1,171 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+#profilepage {
+
+    display: inline-block;
+    height: 100vh;
+    width: 100vw;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    #profilepic {
+        border-radius: 50%;
+        width: 200px;
+        height: 200px;
+        margin-top: 50px;
+    }
+
+    #profilecard {
+        opacity: 0;
+        text-align: center;
+        margin: 0 auto;
+        width: 30%;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        transition: 0.3s;
+        background-color: aqua;
+        height: auto;
+
+
+        #profileform {
+            text-align: left;
+            width: 60%;
+            margin: 0 auto;
+            height: auto;
+        }
+
+    }
+
+    #profilecard:hover {
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    }
+
+}
+
+
+.startjourney {
+
+    text-align: center;
+    height: 100vh;
+    .pagebody {
+
+        margin-top: 50px;
+
+        #journey-card {
+
+            text-align: center;
+            margin: 0 auto;
+            width: 40%;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            transition: 0.3s;
+            background-color: chartreuse;
+            height: auto;
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+
+        #journey-card:hover {
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        #journey_goal {
+            border-radius: 5%;
+            background-color: aliceblue;
+        }
+
+        .button {
+            background-color: #4CAF50;
+            /* Green */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+        }
+    }
+
+
+}
+
+#new_subgoal {
+    background-color: antiquewhite;
+    padding: 10px;
+    width: 40%;
+}
+
+#subgoal-box {}
+
+
+.pagebody {
+    margin-top: 100px;
+}
+
+
+.smallbutton {
+    background-color: chartreuse;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.homepagejourney {
+    width: 300px;
+    height: 200px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    text-align: center;
+    position: relative;
+    transition: preserve-3d;
+}
+
+.homepagejourney:hover {
+    transform: scaleX(1.1) scaley(1.1);
+}
+
+
+.alljourneys {
+    margin-top: 100px;
+    align-self: flex-start;
+    width: 80%;
+    height: 150vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.homepage {
+    display: flex;
+    flex-direction: column;
+}
+
+.carousel-inner > .carousel-item > img {
+  height:500px;
+}
+
+.carousel{
+    margin-top: 50px;
+    align-self: center;
+    width: 70%;
+}

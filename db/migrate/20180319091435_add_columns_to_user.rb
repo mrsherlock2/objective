@@ -1,0 +1,7 @@
+class AddColumnsToUser < ActiveRecord::Migration[5.1]
+  def change
+    add_column :users, :dob, :date
+    add_column :users, :profession, :string
+    add_column :users, :state, :string
+  end
+end

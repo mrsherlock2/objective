@@ -1,0 +1,8 @@
+
+<%=form_for subgoal, :html=>{:class=>"wow fadeInLeft"} do |f|%>
+<%=f.text_field :title, :placeholder=>"Subgoal Details"%>
+<%=f.date_field :deadline%>
+<%=f.hidden_field :journey_id, value: journey.id%>
+<%=f.submit "Add Subgoal", :class=>"smallbutton"%>
+<%end%>
+<br>

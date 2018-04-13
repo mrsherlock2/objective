@@ -1,0 +1,5 @@
+<%@followed.each do |f|%>
+<%@user = User.find(f.user_id)%>
+<%=@user.username%>
+<br>
+<%end%>

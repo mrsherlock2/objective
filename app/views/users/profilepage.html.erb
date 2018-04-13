@@ -1,0 +1,58 @@
+<body id="profilepage">
+<div id="profilecard">
+    
+<%=form_for @user do |f|%>
+    <img id="profilepic" src="<%=@user.avatar%>">
+    <div id="profileform">
+    <br>
+    <br>    
+    <%=f.file_field :avatar%>
+    <br>
+    <br>
+    <%=f.label :username%>
+    <%=f.text_field :username%>
+    <br>
+    <br>
+    <%=f.label :"Date of Birth"%>
+    <%=f.date_field :dob%>
+    <br>
+    <br>
+    <%=f.label :State%>
+    <%=f.text_field :state%>
+    <br>
+    <br>
+    <%=f.label :profession%>
+    
+    <%=f.text_field :profession%>
+    <br>
+    <br>
+    <%=f.submit "Update Details"%>
+        <br>
+        <br>    
+    </div>
+<%end%>
+
+</div>
+    
+    <script>
+    var profilecard = document.getElementById('profilecard');
+        
+        window.addEventListener('load', function(){
+            var opaque = 0.2;
+            var x = setInterval(function(){
+                profilecard.style.opacity = opaque;
+                console.log(opaque);
+                opaque+=0.1;
+                if(opaque >= 1.0)
+                    {
+                        clearInterval(x);
+                    }
+                
+            }, 200)
+        })
+    
+    
+    </script>
+    
+    
+</body>

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  subgoal_id: 1
+  dop: 2018-03-20
+  title: MyString
+  content: MyText
+
+two:
+  subgoal_id: 1
+  dop: 2018-03-20
+  title: MyString
+  content: MyText

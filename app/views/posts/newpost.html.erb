@@ -1,0 +1,23 @@
+<body class="subgoalposts">
+<div class="dailypostsarea">
+<div id="storysharingbox">
+<%=form_for @post do |f|%>
+<%=f.text_area :title, placeholder: 'What new happened today?', cols: '70'%>
+    <div class="menubar"></div>
+    <br>
+<%=f.text_area :content, placeholder: 'How was your day?', cols: '70', rows: '10'%>
+<%=f.hidden_field :subgoal_id, value: @subgoal.id%>
+<br>
+<%=f.submit%>
+<%end%>
+<div class="previousposts">    
+<%@allposts.each do |f|%>
+<%=f.title%>
+<%=f.content%>
+<%end%>
+</div>    
+</div>
+<br>    
+</div>
+<div class="leftsidebar"></div>
+</body>

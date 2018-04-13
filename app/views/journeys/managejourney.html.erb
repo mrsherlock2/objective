@@ -1,0 +1,22 @@
+<h1 class="wow fadeIn">Start With your Journey To <%=@journey.goal%></h1>
+<br>
+<br>
+<div id="subgoalviewbox" class="wow fadeIn">
+<%@subgoals.each do |f|%>
+<div class= "flipper">
+<div class="subgoalcard">
+<%=f.title%>
+<br> 
+
+<br>
+</div>
+<div class="deadline">
+Deadline: <%=f.deadline%> 
+    <br>
+    <br>
+    <br>
+    <button class="btn"><%=link_to 'Share your story', newpost_path(:id=>f.id)%></button>
+</div>    
+</div>
+<%end%>
+</div>
