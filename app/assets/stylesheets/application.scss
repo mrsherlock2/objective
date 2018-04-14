@@ -153,6 +153,15 @@
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: flex-start;
+    
+    #pagecount{
+        text-align: center;
+        width: 100%;
+        align-self: flex-end;
+        h5{
+            display: inline-block;
+        }
+    }
 }
 
 .homepage {

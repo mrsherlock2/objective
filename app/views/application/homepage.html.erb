@@ -40,5 +40,15 @@
 </div>
 <%end%>
     
+<div id="pagecount">
+<%(1..@max_pages).each do |mp|%>
+    <h5><a href="/?page=<%=mp%>&count=<%=@count%>"><%=mp%></a></h5>
+<%end%>
 </div>
+</div>
+    
+
+    
+    
+    
 </body>
